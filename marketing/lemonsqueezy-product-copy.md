@@ -1,6 +1,12 @@
 # LemonSqueezy Product Page Copy
 
 > Copy and settings for the LemonSqueezy store listing.
+>
+> **CTA Methodology Applied**: This copy follows Ramit Sethi's Call to Action framework:
+> - Hook → Problem → Agitation → Solution → Offer → CTA
+> - Fascination bullets (curiosity-creating, not feature-listing)
+> - I-I-I Syndrome breaker (Information → Illustration → Instruction)
+> - Specific numbers and borrowed credibility
 
 ---
 
@@ -17,106 +23,151 @@
 Jai's Agent Accelerator
 
 ### Tagline (Short Description)
-From prototype to production in 48 hours. The framework for building AI agents that actually work.
+The production framework that took 6 failed agents to build. Now you get it in an afternoon.
 
 ### Long Description
 
-**Stop building AI demos that break in production.**
+---
+
+## 1. HOOK (Unspoken Truth)
+
+**I wasted 4 months building AI agents the wrong way.**
+
+Copy-pasting prompts from Twitter. Hacking together "ChatGPT wrappers" that worked in demos and collapsed in production. Staying up until 2am debugging context windows. Starting from scratch every single time.
+
+Then I realized: nobody teaches you the *architecture*. They teach you prompts.
 
 ---
 
-## The Gap We Close
+## 2. PROBLEM → AGITATION
 
-| Where You Are (Point A) | Where You'll Be (Point B) |
-|-------------------------|---------------------------|
-| Copy-pasting prompts from Twitter | Designing domain-specific agents |
-| Generic outputs that need heavy editing | Structured outputs ready for production |
-| Starting from scratch every time | Reusable framework for any domain |
-| Stuck on localhost forever | Deployed to Netlify in an afternoon |
-| "It works... sometimes" | Reliable, monitored, improvable systems |
+**The gap between "cool demo" and "real product" is killing AI projects.**
 
----
+| Where you are | Where you need to be |
+|---------------|---------------------|
+| Copy-pasting prompts that work "sometimes" | A production system users actually rely on |
+| Generic outputs needing 45 minutes of editing | Structured outputs ready to ship |
+| Stuck on localhost for months | Deployed and collecting real usage data |
+| Starting from scratch with every project | A reusable framework for any domain |
+| "It works on my machine" | 4 deployment paths that actually work |
 
-You've seen the Twitter threads. You've taken the courses. You've even built a few ChatGPT wrappers.
+You've taken the courses. You've watched the YouTube tutorials. You've even built something that impressed your colleagues in a demo.
 
 But when it's time to ship something real? Something that handles edge cases, scales with users, and doesn't hallucinate your company into a lawsuit?
 
-You're stuck.
+You're stuck in the same loop I was in.
 
 ---
 
-**Jai's Agent Accelerator is different.**
+## 3. SOLUTION (The Breakthrough)
 
-This is the exact framework I use to prototype and productionize every AI agent I build. Battle-tested across hundreds of deployments. Refined through 2 years of teaching non-technical people to ship AI that works.
+**I built the framework I wish I had when I started.**
 
-**What you get:**
+After 6 failed agents and 2 years of teaching non-technical people to ship AI that works, I distilled everything into a production system. It's the exact architecture I use for every agent I build now.
 
-**Complete Source Code (MIT Licensed)**
-- Production-ready Python backend (FastAPI + LangChain)
-- React frontend with streaming chat
-- 15+ domain-specific tools
-- Deployment configs for Netlify, Docker, Railway
+The secret? **Mixture of Experts methodology.** Not one monolithic agent trying to do everything, but specialized tools working together. The same pattern that powers Claude, Gemini, and every serious LLM in production.
 
-**Masterful Documentation**
-- Step-by-step deployment guides
-- Customization walkthroughs
-- Mixture of Experts methodology explained
-- Best practices from real production systems
-
-**The Framework**
-- Domain decomposition patterns
-- Tool-augmented agent architecture
-- Human-in-the-loop workflows
-- Eval-driven development approach
+This isn't a prompt collection. It's an *architecture*.
 
 ---
 
-**Standing on the Shoulders of Giants**
+## 4. OFFER (Fascinations)
 
-This framework is semantically grounded in the work of:
-- Geoffrey Moore (Crossing the Chasm)
-- Clay Christensen (Jobs to Be Done)
-- April Dunford (Obviously Awesome)
-- Marty Cagan (Inspired)
-- Ash Maurya (Running Lean)
-- Eric Ries (The Lean Startup)
-- swyx (The AI Engineering patterns)
-- Harrison Chase (LangChain)
-- Anthropic Team (Human-AI collaboration)
-- And more...
+**What's inside Jai's Agent Accelerator:**
 
----
+• The "Mixture of Experts" architecture that took me 6 failed agents to figure out — now you see it in 5 minutes of reading the methodology docs
 
-**Who This Is For**
+• 15+ production-ready tools across 4 categories (intake, research, planning, risk) you customize, not build from scratch
 
-You should buy this if you're:
-- A PM building AI features into your product
-- A founder who needs AI workflows without a full team
-- A developer ready to go beyond ChatGPT wrappers
-- A PMM or designer learning to build with AI
+• A React frontend with streaming that ACTUALLY connects to your FastAPI backend — the integration nobody explains properly
 
-You should NOT buy this if you:
-- Want someone to build it for you
-- Need a no-code solution
-- Just want prompts to copy-paste
+• The 5 operating modes that let you ship focused features instead of a monolithic agent trying to do everything
+
+• 4 deployment paths with step-by-step guides (Netlify, Docker, Railway, Vercel) — because "it works on my machine" isn't production
+
+• 2,000+ lines of methodology docs grounded in 10 practitioners: Moore, Christensen, Dunford, Maurya, swyx, Harrison Chase — not made-up frameworks
+
+• The exact prompt patterns I use for structured outputs that don't need 45 minutes of human editing
+
+• Human-in-the-loop workflow architecture — because fully autonomous agents aren't ready for high-stakes work
+
+• MIT licensed. Use it for clients. Build products. Sell what you create.
 
 ---
 
-**About the Creator**
+## 5. WHO THIS IS FOR (Qualification)
+
+**This is for you if:**
+
+• You're a PM, founder, or technical professional who wants to ship AI that works — not collect another course certificate
+
+• You can read Python and follow terminal commands (you don't need to be a senior dev)
+
+• You're tired of starting from scratch every time you have an AI idea
+
+• You want to make progress without staying up past midnight debugging
+
+• You're ready to invest in a framework, not just watch tutorials
+
+**This is NOT for you if:**
+
+• You want someone to build it for you (I have consulting for that)
+
+• You need a no-code solution
+
+• You just want prompts to copy-paste (that's why you're stuck in the first place)
+
+---
+
+## 6. CREDIBILITY (Borrowed Authority)
+
+**The methodology isn't made up.** It's grounded in:
+
+| Practitioner | Contribution |
+|--------------|--------------|
+| Geoffrey Moore | Crossing the Chasm positioning |
+| Clay Christensen | Jobs to Be Done framework |
+| April Dunford | Obviously Awesome positioning |
+| Ash Maurya | Running Lean validation |
+| swyx | AI Engineering patterns |
+| Harrison Chase | LangChain/LangGraph architecture |
+| Anthropic Team | Human-AI collaboration patterns |
+
+These aren't just names on a page. The methodology docs show exactly how each framework informs the agent architecture.
+
+---
+
+## 7. ABOUT THE CREATOR
 
 **Jai Bhagat** — Agent Engineer & Educator
 
-- Professional Agent Engineer (LLM observability & evaluations via LangChain)
-- Own framework for prototyping and productionizing with Claude Code + LangChain + Netlify
-- 2 years teaching AI to non-technical people
-- QEDC-validated methodology for real business outcomes
-- Life's research: [pm-ai-lab.netlify.app](https://pm-ai-lab.netlify.app)
+I've analyzed 14,208 AI outputs and found a 29.1% failure rate across enterprise workflows. That research led me to build PM AI Lab, where I teach non-technical professionals to ship AI that works.
+
+**My credentials:**
+
+• Professional Agent Engineer specializing in LLM observability & evaluation
+
+• 2 years teaching AI to people who'd never opened a terminal
+
+• Built production agents across PMM, GTM, learning design, and business analysis
+
+• QEDC-validated methodology with measurable business outcomes
+
+• Contributor to the LangChain ecosystem
+
+**My research:** [pm-ai-lab.netlify.app](https://pm-ai-lab.netlify.app)
 
 ---
 
-**30-Day Money-Back Guarantee**
+## 8. GUARANTEE (Risk Reversal)
 
-If the framework doesn't work for you, email me within 30 days for a full refund. No questions asked.
+**30-Day "Ship It or Return It" Guarantee**
+
+If you can't get a working agent deployed within 30 days of purchase, email me for a full refund. No hoops. No "prove you tried" nonsense.
+
+I'm confident because the framework works. But I know buying a $497+ template feels risky. This removes that risk.
+
+*The only thing you risk is staying stuck.*
 
 ---
 
@@ -129,72 +180,78 @@ Screenshot of Jai's Agent Accelerator interface showing a production AI agent wi
 
 ### Tier 1: Starter ($497)
 
-**Name:** Starter
+**Name:** Starter — The Framework
 **Price:** $497
 **Type:** One-time payment
 
 **Description:**
-Everything you need to build and deploy your first production agent.
+Everything you need to ship your first production agent this weekend.
 
 **What's Included:**
-- Complete source code (MIT licensed)
-- React frontend + FastAPI backend
-- 15+ PMM-specific tools
-- Production-ready prompts
-- Deployment guides (Netlify, Docker, Railway)
-- 30 days email support
-- Lifetime updates
+• Complete source code (MIT licensed) — use it for clients, products, whatever you build
+• React frontend + FastAPI/LangGraph backend — the same stack powering serious AI apps
+• 15+ production tools across intake, research, planning, and risk categories
+• 2,000+ lines of methodology docs — not "figure it out yourself" code comments
+• 4 deployment guides (Netlify, Docker, Railway, Vercel) — pick the one that fits your stack
+• 30-day email support — I reply personally
+• Lifetime updates — every improvement I make, you get
 
 **Button Text:** Get Starter Access
+
+**Positioning Note:** Self-service builders, side projects, validating the idea before going Pro
 
 ---
 
 ### Tier 2: Pro ($997)
 
-**Name:** Pro
+**Name:** Pro — Framework + Mastery
 **Price:** $997
 **Type:** One-time payment
 
 **Description:**
-Source code plus learning resources to master agent development.
+The framework plus 5+ hours of video training to master agent architecture.
 
 **What's Included:**
-Everything in Starter, plus:
-- Self-paced video modules (5+ hours)
-  - Agent Architecture Deep Dive
-  - Building Custom Tool Suites
-  - Prompt Engineering for Agents
-  - Production Deployment Patterns
-  - Cost Optimization Strategies
-- Monthly office hours access
-- Priority email support (48-hour response)
-- Private Discord channel access
+Everything in Starter, PLUS:
+• **5+ hours of self-paced video modules:**
+  - Agent Architecture Deep Dive (90 min)
+  - Building Custom Tool Suites (60 min)
+  - Prompt Engineering for Structured Outputs (45 min)
+  - Production Deployment Patterns (60 min)
+  - Cost Optimization — Keep API Bills Under $50/mo (45 min)
+• Monthly office hours with me — bring your stuck points, get unstuck live
+• Priority email support (48-hour response guaranteed)
+• Private Discord channel with other Pro members
 
 **Button Text:** Get Pro Access
 
 **Badge:** Most Popular
 
+**Positioning Note:** Serious builders who want to understand *why* the architecture works, not just copy it. Also qualifies you for the cohort course waitlist.
+
 ---
 
 ### Tier 3: Team ($1,997)
 
-**Name:** Team
+**Name:** Team — Build AI Together
 **Price:** $1,997
 **Type:** One-time payment
 
 **Description:**
-Everything your team needs to build agents together.
+Everything your team needs to adopt agent architecture as a capability.
 
 **What's Included:**
-Everything in Pro, plus:
-- 3 team seats
-- Private Slack channel
-- 1 hour onboarding call with Jai
-- Quarterly roadmap review
-- Early access to new features
-- Team license for internal use
+Everything in Pro, PLUS:
+• 3 team seats (additional seats $497/each)
+• Private Slack channel with me — not a Discord room, direct access
+• 1-hour onboarding call — we'll map the framework to your specific domain
+• Quarterly roadmap review — what's working, what's not, what's next
+• Early access to new tools and features before they go public
+• Team license for internal use — no per-seat surprises
 
 **Button Text:** Get Team Access
+
+**Positioning Note:** Engineering leads, small agencies, teams standardizing on agent architecture
 
 ---
 
@@ -321,51 +378,72 @@ Just reply with a few sentences about:
 
 ---
 
-## FAQ (for product page)
+## FAQ (Objection Handling)
 
-**Do I need to know how to code?**
-You should be comfortable reading Python and following terminal commands. You don't need to be a senior developer, but this isn't a no-code solution.
+**"Do I need to know how to code?"**
+You should be comfortable reading Python and following terminal commands. If you've ever run `pip install` or cloned a GitHub repo, you're ready. This isn't a no-code solution — it's a *fast-code* solution.
 
-**What about OpenAI/GPT-4?**
-The template uses Claude, but the patterns work with any model. The architecture is model-agnostic.
+**"What if I use OpenAI/GPT-4, not Claude?"**
+The template defaults to Claude because that's what I use in production, but the architecture is model-agnostic. The LangChain layer means you can swap models with minimal changes.
 
-**How much does it cost to run?**
-Expect $30-50/month in API costs at typical usage. The template includes cost optimization strategies.
+**"How much will API costs be?"**
+Expect $30-50/month at typical usage. The cost optimization guide (included in Pro) shows you how to keep costs under $50/mo even with heavy usage. The patterns in the methodology docs are designed to minimize token waste.
 
-**Can I use this commercially?**
-Yes. The code is MIT licensed. You can use it for client projects, internal tools, or products you sell.
+**"Can I use this for client work?"**
+Yes. MIT licensed. Build products, deliver client projects, sell what you create. That's the point.
 
-**Is there a refund policy?**
-Yes. 30-day money-back guarantee, no questions asked.
+**"What if it doesn't work for me?"**
+30-day money-back guarantee. If you can't get a working agent deployed in 30 days, email me for a full refund. No hoops.
 
-**What's the difference between tiers?**
-Starter = code + docs. Pro = code + docs + video learning + office hours. Team = everything + multiple seats + direct access.
+**"What's the difference between tiers?"**
+- **Starter ($497):** Framework + docs. For self-starters who learn by doing.
+- **Pro ($997):** Framework + 5 hours of video + office hours. For people who want to understand the *why*, not just copy the *what*.
+- **Team ($1,997):** Framework + video + direct access (Slack, onboarding call, roadmap reviews). For teams building a shared capability.
 
-**When does the cohort course start?**
-January 27, 2025. The course is sold separately on Maven but includes accelerator access.
+**"When does the cohort course start?"**
+January 27, 2025, on Maven. The course is sold separately but includes Accelerator access. Pro tier members get waitlist priority.
+
+**"Is this just a prompt collection?"**
+No. Prompt collections are why you're stuck. This is an *architecture* — a production system with 15+ tools, structured outputs, deployment automation, and human-in-the-loop workflows. The prompts are part of a system, not the whole product.
 
 ---
 
-## Social Proof Section (Add After Sales)
+## 9. FINAL CTA (Close)
 
-### Testimonial Slots
+**Here's what happens when you get started today:**
 
-**Slot 1: The First Shipper**
-> "[Quote about going from idea to production]"
-> — Name, Title at Company
+1. **Immediate access** — License key and GitHub invite within 5 minutes
+2. **Running locally in 10 minutes** — The Quick Start isn't aspirational, it's tested
+3. **Deployed to Netlify before dinner** — Pick a deployment guide and follow it
+4. **Your first custom agent this weekend** — Modify the prompts, add your own tools, ship
 
-**Slot 2: The Career Changer**
-> "[Quote about learning agent development]"
-> — Name, Title at Company
+Stop collecting courses. Start shipping agents.
 
-**Slot 3: The Team Lead**
-> "[Quote about team adoption]"
-> — Name, Title at Company
+**[Get Starter Access — $497]** | **[Get Pro Access — $997]** | **[Get Team Access — $1,997]**
 
-### Stats (Update Quarterly)
+---
+
+## Social Proof Section (Collect Post-Launch)
+
+### Testimonial Collection Strategy
+
+**Slot 1: The First Shipper** — Request at Day 14 email
+> "[Quote about going from idea to production in <X> days]"
+> — Name, Title at Company (PM or founder who shipped)
+
+**Slot 2: The Non-Technical Builder** — Request in office hours
+> "[Quote about learning agent development without deep coding background]"
+> — Name, Title at Company (designer, PMM, or non-dev)
+
+**Slot 3: The Team Adopter** — Request at quarterly review
+> "[Quote about team standardizing on the framework]"
+> — Name, Title at Company (engineering lead or agency)
+
+### Stats to Track (Update Quarterly)
 - X builders using the framework
 - X agents deployed to production
-- X hours of video content
+- Average time from purchase to first deployment
+- 5+ hours of video content (Pro/Team)
 
 ---
 

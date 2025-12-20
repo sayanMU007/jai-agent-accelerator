@@ -1,78 +1,154 @@
 # Jai's Agent Accelerator
 
-> **From prototype to production in 48 hours.**
-
-A battle-tested framework for building, deploying, and iterating on AI agents—created by an agent engineer who's spent 2 years teaching non-technical people to ship AI that works.
+> **Build your first production AI agent this weekend.**
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start)
 [![Powered by LangChain](https://img.shields.io/badge/Powered%20by-LangChain-blue)](https://langchain.com)
 
 ---
 
+## Quick Start (10 minutes)
+
+**New here?** → [First-Time Setup Guide](docs/FIRST_TIME_SETUP.md) has step-by-step instructions for your experience level.
+
+Get the agent running locally in 4 steps.
+
+### Prerequisites
+
+- Python 3.11+ ([install](https://python.org))
+- Node.js 18+ ([install](https://nodejs.org))
+- Anthropic API key ([get one](https://console.anthropic.com))
+
+### Step 1: Clone & Setup Backend
+
+```bash
+git clone https://github.com/chai-with-jai/jai-agent-accelerator.git
+cd jai-agent-accelerator/apps/agent
+
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -e .
+
+export ANTHROPIC_API_KEY=sk-ant-your-key-here
+python -m uvicorn pmm_agent.server:app --host 0.0.0.0 --port 8123
+```
+
+### Step 2: Setup Frontend (New Terminal)
+
+```bash
+cd jai-agent-accelerator/apps/web
+npm install
+npm run dev
+```
+
+### Step 3: Use the Agent
+
+Open [http://localhost:3003](http://localhost:3003)
+
+Ask: "What is product positioning and why does it matter?"
+
+### Step 4: Verify It Works
+
+You should see a structured response explaining positioning using April Dunford's framework.
+
+**Stuck?** → [Troubleshooting Guide](docs/TROUBLESHOOTING.md)
+
+---
+
+## What You'll Build
+
+A production-ready AI agent that:
+
+- **Analyzes products** and extracts value propositions
+- **Researches competitors** and market positioning
+- **Creates deliverables** (positioning statements, battlecards, messaging)
+- **Validates decisions** with human-in-the-loop checkpoints
+
+**The architecture:**
+```
+User Query → React Frontend → FastAPI Backend → Claude + Tools → Structured Output
+```
+
+---
+
+## Your Learning Path
+
+| Level | You Can... | Time |
+|-------|------------|------|
+| **Emerging** | Run agent locally, ask questions | 30 min |
+| **Developing** | Modify prompts, observe changes | 2 hours |
+| **Proficient** | Create custom tools | 4 hours |
+| **Advanced** | Deploy to production | 6 hours |
+
+**Total time to production: ~12 hours of focused work**
+
+→ [Full Learning Path](docs/LEARNING_PATH.md)
+→ [Exercises](docs/EXERCISES.md)
+
+---
+
+## Pre-Assessment: Where Are You Starting?
+
+**Have you used the API before?**
+- [ ] No, just ChatGPT/Claude interface → Start at Emerging
+- [ ] Yes, made API calls → Start at Developing
+- [ ] Yes, with tools/function calling → Start at Proficient
+
+**Can you run Python from terminal?**
+- [ ] No → [15-min Python setup first](https://realpython.com/installing-python/)
+- [ ] Yes → Continue with Quick Start above
+
+---
+
+## Who This Is For
+
+### Product Managers
+Building AI features into your product? You need to understand what's possible and how to spec AI work.
+
+**Before:** Copy-paste prompts, generic outputs that need heavy editing.
+**After:** Working prototype you can demo, framework for speccing AI features.
+
+### Product Marketing Managers
+Drowning in positioning docs and battlecards? You want AI that understands PMM workflows.
+
+**Before:** Start from scratch every time, hours editing generic outputs.
+**After:** Agent that generates battlecards and positioning in YOUR voice.
+
+### Founders & Solo Operators
+Need PMM/PM output without hiring a team? You want to move fast with quality.
+
+**Before:** Your "AI strategy" is copying prompts and hoping.
+**After:** Production agent handling research and deliverables for YOUR startup.
+
+### Designers Learning AI
+Want to understand how AI products work? You know AI is changing design.
+
+**Before:** Used ChatGPT but don't understand the architecture.
+**After:** Practical experience building agents, framework for AI UX.
+
+---
+
 ## The Story
 
-I've taught hundreds of PMs, designers, and founders to build AI agents. Not toy demos—real systems that run in production.
+I've taught hundreds of people to build AI agents. The pattern is always the same:
 
-The pattern is always the same:
 1. **Day 1:** "I made a ChatGPT wrapper!"
 2. **Day 3:** "Why is the output so generic?"
 3. **Day 7:** "How do I make it remember context?"
 4. **Day 14:** "How do I know if it's actually good?"
 5. **Day 30:** "Why can't I deploy this anywhere?"
 
-This repo solves all of that. It's the system I use to prototype and productionize every agent I build—battle-tested with Claude Code, LangChain, and Netlify.
+This repo solves all of that. It's the system I use to prototype and productionize every agent—battle-tested with Claude, LangChain, and Netlify.
 
 **My credentials:**
-- Professional Agent Engineer (LLM observability & evaluations via LangChain)
+- Professional Agent Engineer (LLM observability & evaluations)
 - 2 years teaching AI to non-technical people
 - QEDC-validated methodology for real business outcomes
-- Life's research documented at [pm-ai-lab.netlify.app](https://pm-ai-lab.netlify.app)
+- Research documented at [pm-ai-lab.netlify.app](https://pm-ai-lab.netlify.app)
 
 ---
 
-## Who This Is For
-
-### If You're a Product Manager...
-You're building AI features into your product. You need to understand what's possible, what's hard, and how to spec AI work for your engineers.
-
-**Before:** You copy-paste prompts from Twitter and get generic outputs that need heavy editing.
-**After:** You have a working prototype you can demo to stakeholders and a framework for speccing AI features your team can actually build.
-
-**Your first project:** Build an agent that helps with roadmap prioritization, competitive analysis, or PRD generation for YOUR product.
-
----
-
-### If You're a Product Marketing Manager...
-You're drowning in positioning docs, battlecards, and launch plans. You want AI that understands PMM workflows—not generic ChatGPT that needs constant hand-holding.
-
-**Before:** You start from scratch every time and spend hours editing generic AI outputs.
-**After:** You have an agent that generates competitive battlecards, positioning statements, and messaging matrices in YOUR voice.
-
-**Your first project:** Build an agent that analyzes competitors and generates sales-ready battlecards for YOUR market.
-
----
-
-### If You're a Founder or Solo Operator...
-You need PMM/PM output without hiring a team. You want to move fast but can't afford generic AI that makes you look amateur to investors and customers.
-
-**Before:** Your "AI strategy" is copying prompts and hoping for the best.
-**After:** You have a production-ready agent handling investor deck research, GTM strategy, and customer interview synthesis for YOUR startup.
-
-**Your first project:** Build an agent that prepares you for investor conversations with talking points and anticipated questions.
-
----
-
-### If You're a Designer Learning AI...
-You want to understand what's under the hood so you can design better AI experiences. You know AI is changing product design and you want hands-on experience.
-
-**Before:** You've used ChatGPT but don't understand how AI products actually work.
-**After:** You have practical experience building agents and a framework for thinking about AI UX patterns.
-
-**Your first project:** Build an agent that synthesizes user research findings or generates design system documentation.
-
----
-
-## What You Get
+## What's Inside
 
 ### The Framework
 
@@ -85,35 +161,35 @@ jai-agent-accelerator/
 │   │       ├── prompts.py        # MoE methodology + 10 Giants framework
 │   │       ├── server.py         # Production-ready FastAPI
 │   │       └── tools/            # 15+ domain-specific tools
-│   │           ├── intake.py     # Product analysis
-│   │           ├── research.py   # Competitive intelligence
-│   │           ├── planning.py   # Positioning & messaging
-│   │           └── risk.py       # Validation & risk assessment
 │   └── web/                      # React frontend (Vite + Tailwind)
-├── config/
-│   └── domains/
-│       └── pmm.json              # Domain configuration
-├── docs/
-│   ├── DEPLOYMENT.md             # Step-by-step deployment guides
-│   ├── CUSTOMIZATION.md          # How to adapt for your domain
-│   └── METHODOLOGY.md            # The Mixture of Experts approach
-└── docker-compose.yml            # One-command local setup
+├── config/domains/               # Domain configurations
+└── docs/                           # Learning materials
+    ├── FIRST_TIME_SETUP.md        # Setup by experience level
+    ├── LEARNING_PATH.md           # Your progression guide
+    ├── EXERCISES.md               # 5 progressive challenges
+    ├── SHOWCASE.md                # Present your project
+    ├── METHODOLOGY.md             # Mixture of Experts explained
+    ├── CUSTOMIZATION.md           # Adapt for your domain
+    ├── DEPLOYMENT.md              # 4 deployment options
+    ├── TROUBLESHOOTING.md         # When things go wrong
+    ├── BUILD_VS_BUY.md            # Infrastructure decisions
+    ├── ARCHITECTURE_DECISIONS.md  # Productionization guide
+    └── COST_OF_BUILDING.md        # Agent-native economics
 ```
 
 ### The Methodology: Mixture of Experts
 
-Instead of one monolithic prompt trying to do everything, we decompose expertise into specialized sub-agents that work together.
+Instead of one monolithic prompt, we decompose expertise into specialized sub-agents:
 
-**Core Principles:**
-1. **DOMAIN DECOMPOSITION** — Break complex domains into specialized sub-experts
-2. **SEMANTIC GROUNDING** — Ground agent behavior in established frameworks
-3. **HUMAN-IN-THE-LOOP** — Critical decisions require human approval
-4. **EVAL-DRIVEN** — Every output should be measurable and improvable
-5. **ITERATIVE REFINEMENT** — Start rough, improve through feedback loops
+1. **Domain Decomposition** — Break complex domains into specialized experts
+2. **Semantic Grounding** — Ground behavior in established frameworks
+3. **Human-in-the-Loop** — Critical decisions require human approval
+4. **Eval-Driven** — Every output is measurable and improvable
+5. **Iterative Refinement** — Start rough, improve through feedback
 
-### Standing on the Shoulders of Giants
+### Standing on Giants
 
-The agent's intelligence is semantically grounded in the work of 10 practitioners who've shaped how we think about products, markets, and AI:
+The agent's intelligence is grounded in 10 practitioners:
 
 | Giant | Key Insight | Applied When |
 |-------|-------------|--------------|
@@ -128,246 +204,87 @@ The agent's intelligence is semantically grounded in the work of 10 practitioner
 | Anthropic Team | Human-AI collaboration | Surfacing decisions |
 | Rahul & Alex | Observability matters | Debugging outcomes |
 
----
-
-## Quick Start
-
-### Prerequisites
-
-- Python 3.11+
-- Node.js 18+
-- Anthropic API key
-
-### Local Development (5 minutes)
-
-```bash
-# Clone the repo
-git clone https://github.com/chai-with-jai/jai-agent-accelerator.git
-cd jai-agent-accelerator
-
-# Backend setup
-cd apps/agent
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -e .
-
-# Set your API key
-export ANTHROPIC_API_KEY=sk-ant-...
-
-# Start the agent
-python -m uvicorn pmm_agent.server:app --host 0.0.0.0 --port 8123
-```
-
-In a new terminal:
-
-```bash
-# Frontend setup
-cd apps/web
-npm install
-npm run dev
-```
-
-Open [http://localhost:3003](http://localhost:3003) — you're running a production-grade agent.
-
----
-
-## Deployment Guide
-
-### Option 1: Netlify + LangChain (Recommended)
-
-This is the deployment pattern I use for all my agents. It's fast, cheap, and scales.
-
-#### Step 1: Prepare Your Repository
-
-Create a `netlify.toml` in the root:
-
-```toml
-[build]
-  command = "cd apps/web && npm install && npm run build"
-  publish = "apps/web/dist"
-
-[functions]
-  directory = "apps/agent/netlify/functions"
-
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
-```
-
-#### Step 2: Create the Netlify Function
-
-Create `apps/agent/netlify/functions/agent.py`:
-
-```python
-from pmm_agent.server import app
-from mangum import Mangum
-
-handler = Mangum(app)
-```
-
-#### Step 3: Deploy
-
-```bash
-# Install Netlify CLI
-npm install -g netlify-cli
-
-# Login and deploy
-netlify login
-netlify init
-netlify env:set ANTHROPIC_API_KEY sk-ant-...
-netlify deploy --prod
-```
-
-Your agent is now live at `https://your-site.netlify.app`
-
-#### Step 4: Verify
-
-```bash
-curl https://your-site.netlify.app/api/health
-# → {"status": "ok", "agent": "jai-agent-accelerator"}
-```
-
-### Option 2: Vercel (Coming Soon)
-
-Vercel deployment guide is in development. Pattern:
-- Backend: Vercel Serverless Functions (Python runtime)
-- Frontend: Vercel (zero-config for Vite)
-
-### Option 3: Docker (Self-Hosted)
-
-```bash
-docker-compose up --build
-# Backend: http://localhost:8123
-# Frontend: http://localhost:3003
-```
-
-### Option 4: Railway
-
-```bash
-npm i -g @railway/cli
-railway login
-railway init
-railway up
-```
-
----
-
-## Agent Modes
-
-| Mode | Tools Available | Use Case |
-|------|-----------------|----------|
-| `full` | All 15+ tools | Complete PMM workflow |
-| `intake` | Product analysis | Understanding product |
-| `research` | Competitive intel | Market analysis |
-| `planning` | Positioning/messaging | Strategic deliverables |
-| `risk` | Validation | Risk assessment |
-
-```python
-from pmm_agent import create_pmm_agent
-
-# Full capability agent
-agent = create_pmm_agent(mode="full")
-
-# Specialized research agent
-research_agent = create_pmm_agent(mode="research")
-```
+→ [Full Methodology](docs/METHODOLOGY.md)
 
 ---
 
 ## Tools Reference
 
-### Intake Tools
-- `analyze_product` — Extract product details and value props
-- `extract_value_props` — Identify benefits and proof points
-- `identify_icp` — Define ideal customer profile
+### Agent Modes
 
-### Research Tools
-- `search_competitors` — Find and analyze competitors
-- `analyze_pricing` — Competitive pricing research
-- `fetch_url` — Retrieve web content
-- `analyze_reviews` — Mine customer feedback
+| Mode | Tools Available | Use Case |
+|------|-----------------|----------|
+| `full` | All 15+ tools | Complete workflow |
+| `intake` | Product analysis | Understanding product |
+| `research` | Competitive intel | Market analysis |
+| `planning` | Positioning/messaging | Strategic deliverables |
+| `risk` | Validation | Risk assessment |
 
-### Planning Tools
-- `create_positioning_statement` — Dunford framework positioning
-- `create_messaging_matrix` — Audience-specific messaging
-- `create_battlecard` — Sales enablement
-- `create_launch_plan` — GTM timeline
-- `create_checklist` — PMM workflow checklists
+### Available Tools
 
-### Risk Tools
-- `assess_market_risks` — Risk matrix and mitigation
-- `validate_positioning` — Customer validation framework
-- `identify_gaps` — Gap analysis and action plan
+**Intake:** `analyze_product`, `extract_value_props`, `identify_icp`
+**Research:** `search_competitors`, `analyze_pricing`, `fetch_url`, `analyze_reviews`
+**Planning:** `create_positioning_statement`, `create_messaging_matrix`, `create_battlecard`, `create_launch_plan`
+**Risk:** `assess_market_risks`, `validate_positioning`, `identify_gaps`
 
 ---
 
-## Customization
+## Deployment
 
-### Adding Your Own Domain
+When you're ready to go live, choose your platform:
 
-1. **Copy the config template:**
-```bash
-cp config/domains/pmm.json config/domains/your-domain.json
-```
+| Platform | Best For | Setup Time | Cost |
+|----------|----------|------------|------|
+| **Netlify** | Just works | 30 min | $0-25/mo |
+| **Railway** | More control | 20 min | $5-20/mo |
+| **Docker** | Self-hosted | 45 min | Your infra |
+| **Vercel** | React apps | 25 min | $0-20/mo |
 
-2. **Update the domain configuration**
-
-3. **Create domain-specific tools** in `tools/your_domain.py`
-
-4. **Update the prompts** to reflect your domain expertise
-
-See `docs/CUSTOMIZATION.md` for the full guide.
-
----
-
-## API Reference
-
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/health` | GET | Health check |
-| `/chat` | POST | Send message, get response |
-| `/chat/stream` | POST | Streaming response |
-| `/sessions/{id}` | DELETE | Clear session |
+→ [Deployment Guide](docs/DEPLOYMENT.md)
+→ [Build vs Buy](docs/BUILD_VS_BUY.md)
+→ [Architecture Decisions](docs/ARCHITECTURE_DECISIONS.md) (when you're ready to scale)
+→ [Cost of Building](docs/COST_OF_BUILDING.md) (agent-native vs. traditional teams)
 
 ---
 
 ## Pricing & Support
 
-This is a premium product sold on [LemonSqueezy](https://lemonsqueezy.com).
+This is a premium product sold on [LemonSqueezy](https://chaiwithjai.lemonsqueezy.com).
 
 | Tier | Price | Includes |
 |------|-------|----------|
-| **Starter** | $497 | Source code + docs + 30 days email support |
-| **Pro** | $997 | + Self-paced video modules + Office hours access |
-| **Team** | $1,997 | + 3 seats + Private Slack channel |
+| **Starter** | $497 | Source code + docs + 30-day email support |
+| **Pro** | $997 | + Video modules + Office hours + Priority support |
+| **Team** | $1,997 | + 3 seats + Private Slack + Onboarding call |
 
-### What's Included
+### What's in Each Tier
 
 **Starter ($497):**
-- Complete source code (MIT licensed for your use)
-- Masterful documentation
-- Deployment guides (Netlify, Vercel, Docker, Railway)
-- 30 days email support
+- Complete source code (MIT licensed)
+- All documentation (Learning Path, Exercises, etc.)
+- 4 deployment guides
+- 30-day email support
 - Lifetime updates
 
 **Pro ($997):**
 Everything in Starter, plus:
-- Self-paced video modules
+- 5+ hours of self-paced video
 - Monthly office hours access
-- Priority email support
+- Priority email support (24-hour response)
+- Maven cohort waitlist priority
 
 **Team ($1,997):**
 Everything in Pro, plus:
 - 3 team seats
 - Private Slack channel
-- 1 hour onboarding call
+- 1-hour onboarding call
+- Quarterly roadmap review
 
 ### Cohort Course
 
-Want hands-on learning? Join my **cohort-based course starting January 27, 2025**.
+Want live instruction? Join my **cohort-based course starting January 27, 2025**.
 
-4 weeks, 4 live sessions, working agent at the end.
+4 weeks, 8 sessions, working agent at the end.
 
 [Learn more →](https://chaiwithjai.com/course)
 
@@ -375,20 +292,32 @@ Want hands-on learning? Join my **cohort-based course starting January 27, 2025*
 
 ## FAQ
 
-**Who is this for?**
-PMs, designers, and founders who want to build AI that actually works.
-
 **Do I need to code?**
-You should be comfortable reading Python and terminal commands.
+You should be comfortable reading Python and terminal commands. Not senior developer level, but not no-code either.
 
-**What about OpenAI?**
-Uses Claude, but patterns work with any model.
+**What about OpenAI/GPT-4?**
+Uses Claude, but patterns work with any model. LangChain layer makes swapping models easy.
 
 **How much does it cost to run?**
 $30-50/month in API costs at typical usage.
 
+**Can I use this for client work?**
+Yes. MIT licensed. Build products, deliver client projects, sell what you create.
+
 **Refund policy?**
-30-day money-back guarantee.
+30-day money-back guarantee. No questions asked.
+
+---
+
+## Get Help
+
+| Channel | Response Time | For |
+|---------|---------------|-----|
+| [Troubleshooting](docs/TROUBLESHOOTING.md) | Instant | Common issues |
+| Discord | Hours | Peer support |
+| Email | 48 hours | Starter tier |
+| Priority Email | 24 hours | Pro/Team |
+| Office Hours | Weekly | Pro/Team |
 
 ---
 
@@ -397,7 +326,7 @@ $30-50/month in API costs at typical usage.
 **Jai Bhagat** — Agent Engineer & Educator
 
 - LLM Observability & Evaluations (via LangChain)
-- Prototype → Production Framework (Claude Code + Netlify)
+- Prototype → Production Framework (Claude + Netlify)
 - 2 Years Teaching AI to Non-Technical People
 - QEDC-Validated Methodology
 
